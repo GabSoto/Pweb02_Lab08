@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100&family=Open+Sans:wght@300&family=Poppins:wght@500&family=REM:wght@100&family=Roboto:wght@100&display=swap');
+
+body {
+    background-color: #861226;
+}
+
+div#font {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+div#container {
+    margin: auto;
+    height: 600px;
+    width: 1200px;
+
+    display: flex;
+}
+
+div#container div#img_slider {
+    width: 600px;
+    height: 100%;
+    background-color: yellow;
+}
+
+div#container div#form {
+    width: 600px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.912);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    font-family: 'Poppins', sans-serif;
+    border-right: 0px solid #000;
+    border-radius: 0px 30px 30px 0px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+div#container div#form input {
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    margin-top: 20px;
+    width: 560px;
+    height: 50px;
+    
+    color: rgb(152, 0, 0);
+
+    padding-left: 15px;
+    outline: none; 
+    border: none;
+    border-bottom: 5px solid #ccc;
+    transition: border-bottom 0.3s ease-in-out;
+}
+
+div#container div#form input::placeholder {
+    margin-left: 15px;
+}
+
+div#container div#form input:focus {
+    
+    border-bottom: 5px solid rgb(152, 0, 0);
+}
+
+div#container div#form label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bolder;
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+div#container div#form input#id_show_password {
+    width: 15px;
+    height: 15px;
+}
+
+div#container div#form img#img {
+    width: 280px;
+    height: 280px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+div#container div#form img#img2 {
+    width: 80px;
+    height: 80px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+div#container div#form hr#lin{
+    width: 560px;
+    border: 2px solid rgb(152, 0, 0);
+}
+
+div#container div#form h1#h1reg {
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+div#container div#form div#buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+
+div#container div#form div#buttons button {
+    width: 220px;
+    height: 55px;
+
+    outline: none; 
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+
+    background-color: #ccc;
+    transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+div#container div#form div#buttons button:hover {
+    background-color: rgb(152, 0, 0);
+    color: white;
+}
+
+/* Slider de imágenes*/

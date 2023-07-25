@@ -1,0 +1,23 @@
+{% extends "html/index.html" %}
+{% load static %}
+
+{% block title %}Inicia sesión{% endblock %}
+
+{% block content %}
+
+<img src="{% static 'imgs/AviaconMajes.png' %}" alt="Logo de la empresa" id="img">
+
+<form method="POST">
+    {% csrf_token %}
+    {{form.as_div}}
+    <label>
+        <input type="checkbox" id="id_show_password">
+        Mostrar constraseña
+    </label>
+
+    <div id="buttons">
+        <button>Iniciar</button>
+        <button onclick="window.location.href='{% url 'showRegister' %}'" class="boton-enlace">Registrate</button>
+    </div>
+<form>
+{% endblock %}

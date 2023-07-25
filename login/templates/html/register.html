@@ -1,0 +1,23 @@
+
+{% extends "html/index.html" %}
+{% load static %}
+
+{% block title %}Registrate{% endblock %}
+
+{% block content %}
+<img src="{% static 'imgs/AviaconMajes.png' %}" alt="Logo de la empresa" id="img2">
+<hr id="lin">
+
+<h1 id="h1reg">Registro</h1>
+
+<form method="POST">
+    {% csrf_token %}
+    {{form.as_div}}
+
+    <div id="buttons">
+        <button>Registrarse</button>
+        <button onclick="window.location.href='{% url 'showForm' %}'" class="boton-enlace">Atras</button>
+    </div>
+<form>
+
+{% endblock %}
