@@ -9,7 +9,7 @@
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
-    
+
     <div id="font">
         <div id="container">
             <div id="img_slider">
@@ -29,7 +29,28 @@
         </div>
     </div>
 
-    <script src="{% static 'js/login.js' %}"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    {% if messages %}
+        {% for m in messages %}
+            {% if m.tags == 'success' %}
+                <script>    
+                    Swal.fire({
+                        title: "Bienvenido",
+                        text: "Tu DNI ha sido verificado correctamente.",
+                        icon: "success",
+                    });
+                </script>
+            {% elif m.tags == 'error' %}
+                <script>    
+                    Swal.fire({
+                        title: "Lo sentimos",
+                        text: "Tu DNI no ha sido verificado correctamente.",
+                        icon: "error",
+                    });
+                </script>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
 </body>
 </html>
