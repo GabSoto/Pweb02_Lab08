@@ -8,5 +8,5 @@ class data_user(models.Model):
     apellidos = models.CharField(max_length=100)
     contraseña = models.CharField(max_length=20)
     
-    def __str__(self) -> str:
-        return super().__str__()
+    def __str__(self):
+        return self.nombre + f" dni: {self.dni}"
